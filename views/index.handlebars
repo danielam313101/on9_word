@@ -1,0 +1,52 @@
+<div class="container p-5">
+  <form method="POST" action="/">
+    <div id="form-container">
+      <h2>
+        Who do you want to talk with
+      </h2>
+      <div class="d-flex flex-row bd-highlight mb-3 justify-content-center">
+        <div id="engineer" class="p-2 card card-profession">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            alt="engineer">
+          <div class="card-img-overlay">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="career" id="engineer" value="engineer" {{#if engineer}} checked {{/if}}>
+              <label class="form-check-label" for="engineer">Engineer</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="designer" class="p-2 card card-profession">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            alt="designer">
+          <div class="card-img-overlay">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="career" id="designer" value="designer" {{#if designer}} checked {{/if}}>
+              <label class="form-check-label" for="designer">Designer</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="entrepreneur" class="p-2 card card-profession">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="entrepreneur">
+          <div class="card-img-overlay">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="career" id="entrepreneur" value="entrepreneur" {{#if entrepreneur}} checked {{/if}}>
+              <label class="form-check-label" for="entrepreneur">Entrepreneur</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <button type="submit" class="btn btn-primary mb-3">generate</button>
+        <input type="text" name="generate_sentence" class="form-control" id="generate"
+          value="{{result}}">
+      </div>
+    </div>
+  </form>
+</div>
